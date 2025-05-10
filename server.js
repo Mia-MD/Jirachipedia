@@ -15,17 +15,6 @@ app.use(bodyParser.urlencoded({extended:true}));
 //Get the home page
 app.get("/", async(req,res)=>{
     res.render("index.ejs");
-    /*
-    try{
-        const result = await axios.get(API_URL + "/pokemon/jirachi");
-        const data = result.data;
-        //Note showdown sprites are gifs!! Really cool!
-        //I learnt  from stackoverflow that this is how you deal with variables that have a - in their name
-        const sprite = data.sprites.other['official-artwork'].front_default;         
-        res.render("index.ejs", {jirachi: sprite});
-    }catch(error){
-        res.status(404).sendFile(__dirname + "/views/error.html");
-    }*/
 });
 
 //Get the search page
@@ -90,8 +79,6 @@ app.post("/search", async(req,res)=>{
             total_stats: totalStats,
             sprite: data.sprites.other["official-artwork"].front_default,
         };
-        //res.send(pokemon);
-        console.log(pokemon);
         res.render("pokemon.ejs",{pokemon: pokemon});
     }catch(error){
         res.status(404).render("error.ejs");
@@ -101,7 +88,6 @@ app.post("/search", async(req,res)=>{
 //Get berries page
 app.get("/berries",async(req,res)=>{
     let allBerries = [];
-    //this is pretty slow but it works
     try{
         let index = 126;
         for(let i=0;i<64;i++){
