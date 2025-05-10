@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Berries</title>
+    <link rel="icon" href="/images/jirachi_sprite.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Audiowide&family=Forum&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
+  <body>
+    <%- include("./partials/header.ejs") %>
+    <h1 class="berry-h1">All Berries</h1>
+    <div class="berry-container">
+      <%if(locals.berries){%> <%for(let i=0; i < berries.length; i++){%>
+      <div class="berry yellow-bg">
+        <img
+          class="berry-image"
+          src="<%=berries[i].sprite%>"
+          alt="<%=berries[i].name%> sprite"
+        />
+        <h2><%=berries[i].name%></h2>
+        <p><%=berries[i].description%></p>
+      </div>
+      <%}%> <%}else{%> <%}%>
+    </div>
+
+    <%- include("./partials/footer.ejs") %>
+  </body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/images/jirachi_sprite.png" />
+    <%if(locals.pokemon){%>
+    <title><%= pokemon.name %></title>
+    <%}else{%>
+    <title>Not Found</title>
+    <%}%>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Audiowide&family=Forum&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
+  <body>
+    <%- include("./partials/header.ejs") %> <%if(locals.pokemon){%>
+    <div class="pokemon-container">
+      <div class="left-pokemon">
+        <img
+          class="yellow-circle-pokemon"
+          src="./images/circle.png"
+          alt="circle"
+          height="500px"
+        />
+        <img
+          class="pokemon-image-sprite"
+          src="<%=pokemon.sprite%>"
+          alt="<%=pokemon.name%>"
+        />
+      </div>
+      <div class="right-pokemon">
+        <h1><%=pokemon.name%></h1>
+        <div class="all-types">
+          <%for(let i=0; i < pokemon.type.length; i++){%>
+          <div class="<%=pokemon.type[i]%> type">
+            <p><%=pokemon.type[i]%></p>
+          </div>
+          <%}%>
+        </div>
+
+        <div class="yellow-bg">
+          <h4>Height</h4>
+          <p><%=pokemon.height%></p>
+          <h4>Weight</h4>
+          <p><%=pokemon.weight%></p>
+          <h4>Abilities</h4>
+          <%for(let i=0; i < pokemon.ability.length; i++){%>
+          <div class="<%=pokemon.ability[i].ability%> abilities">
+            <p><%=pokemon.ability[i].ability%></p>
+            <%if(pokemon.ability[i].hidden==true){%>
+            <p class="hidden-ability">(Hidden)</p>
+            <%}%>
+            <br />
+          </div>
+          <%}%>
+        </div>
+        <div class="stats">
+          <h2>Stats</h2>
+          <div>
+            <table>
+              <%for(let i=0; i < pokemon.stats.length; i++){%>
+              <tr>
+                <th class="stat-text"><%=pokemon.stats[i].statName%></th>
+                <td class="stat-num"><%=pokemon.stats[i].statValue%></td>
+                <td class="stat-cell">
+                  <div
+                    style="width: <%= pokemon.stats[i].statValue %>%"
+                    class="stat-bar <%=pokemon.stats[i].statName%>"
+                  ></div>
+                </td>
+              </tr>
+              <%}%>
+              <tr>
+                <th class="stat-text">Total</th>
+                <td class="stat-num"><%=pokemon.total_stats%></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="all-moves">
+          <h2>Moves</h2>
+          <div class="all-moves-tables">
+            <div class="moves">
+              <h3>Moves via Level Up</h3>
+              <table class="moves-table">
+                <tr class="heading-table">
+                  <th class="level">Level</th>
+                  <th class="moves-cell">Move</th>
+                </tr>
+                <%for(let i=0; i < pokemon.level_up_moves.length; i++){%>
+                <tr class="row-moves">
+                  <td><%=pokemon.level_up_moves[i].level%></td>
+                  <td class="move-list">
+                    <%=pokemon.level_up_moves[i].moveName%>
+                  </td>
+                </tr>
+                <%}%>
+              </table>
+            </div>
+            <div class="moves">
+              <h3>Moves via TM/HM</h3>
+              <table class="moves-table">
+                <tr class="heading-table">
+                  <th class="moves-cell">Move</th>
+                </tr>
+                <%for(let i=0; i < pokemon.machine_moves.length; i++){%>
+                <tr class="row-moves">
+                  <td class="move-list">
+                    <%=pokemon.machine_moves[i].moveName%>
+                  </td>
+                </tr>
+                <%}%>
+              </table>
+            </div>
+            <div class="moves">
+              <h3>Moves via Tutor</h3>
+              <table class="moves-table">
+                <tr class="heading-table">
+                  <th class="moves-cell">Move</th>
+                </tr>
+                <%for(let i=0; i < pokemon.tutor_moves.length; i++){%>
+                <tr class="row-moves">
+                  <td class="move-list">
+                    <%=pokemon.tutor_moves[i].moveName%>
+                  </td>
+                </tr>
+                <%}%>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <%}else{%> <%}%>
+    </div>
+    <%- include("./partials/footer.ejs") %>
+  </body>
+</html>

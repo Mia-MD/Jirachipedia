@@ -1,0 +1,496 @@
+*{
+    font-family: "Forum", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin:0;
+    color:#00a19d;
+}
+
+body{
+    background-color: #fff9ef;;
+}
+
+h1,h2,h3{
+    font-family: "Audiowide", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3rem;
+}
+
+h3{
+    font-size: 1.5rem;
+}
+
+hr{
+    background-color: #00a19d;
+    height:2px;
+    border:none;
+}
+
+header{
+    background-color: #00a19d;
+    position:sticky;
+    top:0;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+}
+
+footer{
+    background-color:#00a19d;
+    color:#fff9ef;
+    bottom:0;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    width: 100%;
+}
+
+.foot-a{
+    font-size:12pt;
+}
+
+
+.left-header{
+    display: flex;
+    padding-left: 3%;
+}
+
+.right-header{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+
+.hero{
+    margin-left: 5%;
+    padding-top: 5%;
+    padding-right: 1%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-image: url("../images/background_hero.png");
+}
+
+h1{
+    font-size: 5rem;
+}
+
+.options h2{
+    font-size: 2rem;
+}
+
+
+p{
+    padding-top: 5%;
+    font-size: 16pt;
+    line-height: 1.5;
+}
+
+a{
+    color:#fff9ef;
+    text-decoration: none;
+    font-size: 17pt;
+}
+
+a:hover{
+    color:#ffdd86;
+}
+
+.options{
+    background-color: #ffdd86;
+    border-radius: 20px;
+    display:inline-block;
+    text-align: center;
+    width: 15%;
+    padding: 2%;
+    height:350px;
+}
+
+.options img{
+    width:150px;
+    height:150px;
+}
+
+.options p{
+    padding:5%;
+}
+
+.option button{
+    bottom: 0;
+}
+
+button{
+    background-color: #00a19d;
+    color:#fff9ef;
+    height:15%;
+    width:80%;
+    border-radius: 30px;
+    border:none;
+    font-size: 18pt;
+}
+
+button:hover{
+    background-color: #007a78;
+    cursor:pointer;
+}
+
+input[type="text"]{
+    margin-bottom: 5%;
+    width:50%;
+    padding: 2%;
+    border-radius: 30px;
+    border:2px solid #ffae4a;
+    background-color: #ffdd86;
+    color:#ea8f21;
+    font-size: 16pt;
+}
+
+input[type="text"]:focus{
+    outline: #cb4507;
+    border:2px solid #ea8f21;
+}
+
+::placeholder{
+    color:#ea8f21;
+}
+
+.right-pokemon button{
+    width:20%;
+    padding: 1%;
+    color:#ffdd86;
+}
+
+.features{
+    width:100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 5%;
+}
+
+.stat-bar{
+    width:100%;
+    border: 7px solid red;
+    border-radius: 10px;
+}
+
+table{
+    text-align: left;
+    font-size: 15pt;
+}
+
+td{
+    padding-left: 10%;
+}
+
+tr{
+    width:100%;
+}
+
+td.stat-cell{
+    width:200px;
+    padding-left: 20%;
+}
+
+tr.heading-table{
+    background-color: #ffdd86;
+    width:100%;
+    padding-left: 5%;
+}
+
+.level{
+    width:40%;
+    padding:3%;
+}
+
+.moves{
+    padding-top: 3%;
+    padding-bottom: 2%;
+    padding-right: 4%;
+    width: 30%;
+}
+
+.moves-table{
+    border: 2px solid #00a19d;
+    border-collapse: collapse;
+}
+
+.moves-table th{
+    border-bottom: 2px solid #00a19d;
+}
+
+.moves-cell{
+    min-width: 100%;
+    padding: 3%;
+}
+
+.move-list{
+    padding:3%;
+    width:100%;
+}
+
+.moves-table td{
+    border-right: 1px solid #97c3c3;
+    border-bottom: 1px solid #97c3c3;
+}
+
+.left-pokemon{
+    position:fixed;
+    display: grid;
+    z-index: 0;
+}
+
+.jirachi{
+    padding-top: 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.left{
+    display:grid;
+}
+
+.yellow-circle{
+    margin: 10%;
+    margin-left: 11%;
+}
+
+.pokemon-image{
+    margin-left: 5%;
+}
+
+.yellow-circle, .pokemon-image{
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.pokemon-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr auto;
+    min-height: 87vh;
+}
+
+.pokemon-image-sprite, .yellow-circle-pokemon{
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.right-pokemon{
+    padding-top: 5%;
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.right-pokemon p{
+    padding-bottom: 5%;
+}
+
+.yellow-circle-pokemon{
+    margin: 15%;
+}
+
+.pokemon-image-sprite{
+    margin:15%;
+    margin-left: 18%;
+}
+
+.type{
+    width: 100%;
+    padding: 2%;
+    display: inline-block;
+    border-radius: 30px;
+}
+
+.all-types{
+    display: grid;
+    grid-template-columns: 1fr 1fr 3fr;
+    column-gap: 5%;
+}
+
+.type p{
+    color:white;
+    font-size: 17pt;
+    text-align: center;
+}
+
+.yellow-bg{
+    background-color: #ffdd86;
+    border-radius: 30px;
+    width: 40%;
+    padding:4%;
+    margin-top: 5%;
+}
+
+.stats .yellow-bg{
+    width:60%;
+}
+
+h4{
+    font-size: 17pt;
+    font-weight:900;
+    color:#007a78;
+}
+
+.abilities, .abilities p{
+    display:inline;
+}
+
+.hidden-ability{
+    display: inline;
+    color:#3fbdbb;
+}
+
+.stats, .all-moves{
+    margin-top: 5%;
+}
+
+.all-moves-tables{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.berry{
+    display:flex;
+    flex-direction: column;
+    min-width: 20%;
+    max-width: min-content;
+    margin:2%;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.berry-image{
+    width: 70%;
+}
+
+.berry-h1{
+    padding-top: 2%;
+    text-align: center;
+}
+
+.berry-container{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin:2%;
+}
+
+.error-container{
+    display:grid;
+    grid-template-columns: 50% 50%;
+    width:100%;
+    min-height: 87vh;
+}
+
+.left-error{
+    padding: 10%;
+}
+
+.right-error{
+    padding:2%;
+}
+
+.error-container img{
+    width:100%;
+}
+
+/*All colours for all types*/
+.normal{
+    background-color: #A8A77A;
+}
+
+.fire{
+    background-color: #EE8130;
+}
+
+.water{
+    background-color: #6390F0;
+}
+
+.electric{
+    background-color: #F7D02C;
+}
+
+.grass{
+    background-color: #7AC74C;
+}
+
+.ice{
+    background-color: #96D9D6;
+}
+
+.fighting{
+    background-color: #C22E28;
+}
+
+.poison{
+    background-color: #A33EA1;
+}
+
+.ground{
+    background-color: #E2BF65;
+}
+
+.flying{
+    background-color: #A98FF3;
+}
+
+.psychic{
+    background-color: #F95587;
+}
+
+.bug{
+    background-color: #A6B91A;
+}
+
+.rock{
+    background-color: #B6A136;
+}
+
+.ghost{
+    background-color: #735797;
+}
+
+.dragon{
+    background-color: #6F35FC;
+}
+
+.dark{
+    background-color: #705746;
+}
+
+.steel{
+    background-color: #B7B7CE;
+}
+
+.fairy{
+    background-color: #D685AD;
+}
+
+/*Colors for stats*/
+.hp{
+    border-color: #65e876;
+}
+
+.attack{
+    border-color: #ffd24a;
+}
+
+.defense{
+    border-color: #E86412;
+}
+
+.special-attack{
+    border-color: #14C3F1;
+}
+
+.special-defense{
+    border-color: #4A6ADF;
+}
+
+.speed{
+    border-color: #D51DAD;
+}

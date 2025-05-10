@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jirachipedia</title>
+    <link rel="icon" href="/images/jirachi_sprite.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Audiowide&family=Forum&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
+  <body>
+    <%- include("./partials/header.ejs") %>
+    <div class="container">
+      <div class="hero">
+        <div class="left-hero">
+          <h1>Welcome to Jirachipedia!</h1>
+          <p>
+            This is a small project I made as part of the Complete Fullstack Web
+            Development Bootcamp given by Angela Yu! Using the PokeAPI, I've
+            created a very simple site containing information about pokemon (yes
+            Bulbapedia was my reference!). Hopefully you enjoy this little
+            project of mine as much as I do!
+          </p>
+        </div>
+        <div class="right-hero">
+          <img src="./images/jirachi_hero.png" alt="Jirachi" width="700" />
+        </div>
+      </div>
+      <hr />
+
+      <div class="features">
+        <div class="options">
+          <img src="./images/search.png" alt="glass" height="100px" />
+          <h2>Search</h2>
+          <p>Search to find any pokémon’s stats and typing!</p>
+          <button onclick="location.href='/search';">Search</button>
+        </div>
+
+        <div class="options">
+          <img src="./images/pokeball.png" alt="pokeball" height="100px" />
+          <h2>Random</h2>
+          <p>Generate a random Pokémon!</p>
+          <button onclick="location.href='/random';">Generate</button>
+        </div>
+
+        <div class="options">
+          <img src="./images/berry.png" alt="berry" height="100px" />
+          <h2>Berries</h2>
+          <p>Look up the effects of each berry!</p>
+          <button onclick="location.href='/berries';">Berries</button>
+        </div>
+      </div>
+
+      <div class="jirachi">
+        <div class="left">
+          <img
+            class="yellow-circle"
+            src="./images/circle.png"
+            alt="circle"
+            height="370px"
+          />
+          <img class="pokemon-image" src="./images/jirachi.png" alt="jirachi" />
+        </div>
+        <div class="right-jirachi">
+          <h2>Meet Jirachi!</h2>
+          <div class="yellow-bg">
+            <p>
+              A legend states that Jirachi will make true any wish that is
+              written on notes attached to its head when it awakens. If this
+              Pokémon senses danger, it will fight without awakening.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <%- include("./partials/footer.ejs") %>
+    </div>
+  </body>
+</html>

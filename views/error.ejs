@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 Not Found</title>
+    <link rel="icon" href="/images/jirachi_sprite.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Audiowide&family=Forum&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
+  <body>
+    <!--This is the 404 page that loads when a site isn't found-->
+    <%- include("./partials/header.ejs") %>
+    <div class="error-container">
+      <div class="left-error">
+        <img src="./images/jirachi_horizontal.png" alt="jirachi" />
+      </div>
+      <div class="right-error">
+        <h1>404 Not Found!</h1>
+        <p>
+          Oops! It seems like the page you tried to reach was invalid! Try again
+          by returning to the home page!
+        </p>
+      </div>
+    </div>
+    <%- include("./partials/footer.ejs") %>
+  </body>
+</html>

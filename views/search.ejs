@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search</title>
+    <link rel="icon" href="/images/jirachi_sprite.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Audiowide&family=Forum&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
+  <body>
+    <%- include("./partials/header.ejs") %>
+    <div class="pokemon-container">
+      <div class="left-pokemon">
+        <img
+          class="yellow-circle-pokemon"
+          src="./images/circle.png"
+          alt="circle"
+          height="500px"
+        />
+        <img
+          class="pokemon-image-sprite"
+          src="./images/jirachi_left.webp"
+          alt="jirachi"
+          height="500px"
+        />
+      </div>
+      <div class="right-pokemon">
+        <h1>Search</h1>
+        <p>What Pokemon are you searching for?</p>
+        <form action="/search" method="post">
+          <input type="text" name="pokemon" placeholder="Enter a Pokemon" />
+          <br />
+          <button type="submit">Search!</button>
+        </form>
+      </div>
+    </div>
+    <%-include("./partials/footer.ejs") %>
+  </body>
+</html>
